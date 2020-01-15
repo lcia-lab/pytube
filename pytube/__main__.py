@@ -255,7 +255,8 @@ class YouTube(object):
         :rtype: str
 
         """
-        return self.player_config_args['thumbnail_url']
+        #return self.player_config_args['thumbnail_url']
+        return f"https://img.youtube.com/vi/{self.video_id}/maxresdefault.jpg"
 
     @property
     def title(self):
@@ -296,7 +297,8 @@ class YouTube(object):
         :rtype: str
 
         """
-        return self.player_config_args['length_seconds']
+        #return self.player_config_args['length_seconds']
+        return self.player_config_args['player_response']['videoDetails']['lengthSeconds']
 
     @property
     def views(self):
